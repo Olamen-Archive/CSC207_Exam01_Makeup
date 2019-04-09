@@ -27,12 +27,14 @@ public class QuicksortDNF {
     if (high - low <= 1) {
       return;
     } // if zero or one elements
-    
-    int lb = low;
-    int hb = high;
-    int pos = lb + 1;
-    int pivot = values[low];
 
+    /* initialize pointer */
+    int lb = low;  // lower bound, exclusive
+    int hb = high; // high bound, inclusive
+    int pos = lb + 1; // equal bound, exclusive
+    int pivot = values[low]; // pivot for partition
+
+    /* partition */
     while (pos < hb) {
       if (values[pos] < pivot) {
         swap(values, lb++, pos++);
