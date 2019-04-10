@@ -5,9 +5,11 @@ import java.util.Random;
 /**
  * An implementation of Quicksort that partitions using the Dutch National
  * Flag algorithm.
+ * Code based on Zixuan Guo's previous ThreeWayQuickSort code:
+ * https://github.com/Olament/algs4/blob/master/Part%20One/Sort/ThreeWayQuickSort.java
  *
  * @author Samuel A. Rebelsky
- * @author Your Name Here
+ * @author Zixuan Guo
  */
 public class QuicksortDNF {
   /**
