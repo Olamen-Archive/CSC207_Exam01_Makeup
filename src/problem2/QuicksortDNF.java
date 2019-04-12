@@ -3,9 +3,8 @@ package problem2;
 import java.util.Random;
 
 /**
- * An implementation of Quicksort that partitions using the Dutch National
- * Flag algorithm.
- * Code based on Zixuan Guo's previous ThreeWayQuickSort code:
+ * An implementation of Quicksort that partitions using the Dutch National Flag algorithm. Code
+ * based on Zixuan Guo's previous ThreeWayQuickSort code:
  * https://github.com/Olament/algs4/blob/master/Part%20One/Sort/ThreeWayQuickSort.java
  *
  * @author Samuel A. Rebelsky
@@ -19,10 +18,9 @@ public class QuicksortDNF {
     shuffle(values);
     sort(values, 0, values.length);
   } // sort(int[])
-  
+
   /**
-   * Sort the subarray of values between lb (inclusive) and ub (exclusive)
-   * using Quicksort w/DNF
+   * Sort the subarray of values between lb (inclusive) and ub (exclusive) using Quicksort w/DNF
    */
   private static void sort(int[] values, int low, int high) {
     // Special case: 0 or 1 elements
@@ -31,7 +29,7 @@ public class QuicksortDNF {
     } // if zero or one elements
 
     /* initialize pointer */
-    int lb = low;  // lower bound, exclusive
+    int lb = low; // lower bound, exclusive
     int hb = high; // high bound, inclusive
     int pos = lb + 1; // equal bound, exclusive
     int pivot = values[low]; // pivot for partition
@@ -51,12 +49,14 @@ public class QuicksortDNF {
     sort(values, low, lb);
     sort(values, hb, high);
   } // sort(int[], int, int)
-  
+
   /**
    * Swap the elements at positions i and j.
    */
   private static void swap(int[] values, int i, int j) {
-    if (i == j) { return; } // no need for swap if same indexes
+    if (i == j) {
+      return;
+    } // no need for swap if same indexes
     int tmp = values[i];
     values[i] = values[j];
     values[j] = tmp;
